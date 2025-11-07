@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int coelho = 1;
+int geracao = 1;
+int coelho_pai;
+
+int main(){
+    printf("quantas gerações você deseja?\n");
+    scanf("%d", &coelho_pai);
+    for(int friend = 1; friend <= coelho_pai; friend++){
+        printf("geração: %d --- quantia de coelhos: %d\n\n", friend, coelho);
+        geracao = geracao * 2;
+        coelho = geracao + geracao - 1;
+    }
+}
