@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+    int n;          
+    int numero = 1;
+
+    printf("Digite o número de linhas (n) para o Triângulo de Floyd: ");
+    if (scanf("%d", &n) != 1) {
+        printf("Entrada inválida. Por favor, digite um número inteiro.\n");
+        return 1; 
+    }
+
+    if (n <= 0) {
+        printf("O número de linhas deve ser positivo.\n");
+        return 1;
+    }
+
+    printf("\nTriângulo de Floyd para n = %d:\n", n);
+
+    for (int i = 1; i <= n; i++) {
+      
+        for (int j = 1; j <= i; j++) {
+            
+            printf("%d ", numero);
+            
+            
+            numero++;
+        }
+        
+        printf("\n");
+    }
+
+    return 0; 
+}
